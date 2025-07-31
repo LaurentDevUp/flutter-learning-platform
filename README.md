@@ -10,6 +10,35 @@ Une application Flutter complète avec authentification et base de données en t
 - ✅ **Sécurité** : Row Level Security (RLS) activée
 - ✅ **Multi-plateforme** : Support Web, Android, iOS, Windows, Linux, macOS
 
+## 🔐 Configuration de sécurité
+
+### Variables d'environnement
+Les clés API ne doivent **jamais** être hardcodées. Utilisez des variables d'environnement :
+
+1. **Créer le fichier de configuration** :
+   ```bash
+   cp lib/config/app_config_template.dart lib/config/app_config.dart
+   ```
+
+2. **Configurer les variables d'environnement** :
+   ```bash
+   # Créer le fichier .env
+   cp .env.example .env
+   
+   # Éditer .env avec vos vraies clés
+   SUPABASE_URL=https://your-project.supabase.co
+   SUPABASE_ANON_KEY=your-actual-key
+   ```
+
+3. **Lancer l'application** :
+   ```bash
+   # Méthode 1 : avec dart-define
+   flutter run --dart-define=SUPABASE_URL=https://your-project.supabase.co --dart-define=SUPABASE_ANON_KEY=your-key
+   
+   # Méthode 2 : avec le script Windows
+   run_secure.bat
+   ```
+
 ## Configuration Supabase
 
 ### Variables d'environnement
