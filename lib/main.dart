@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'screens/auth_screen.dart';
-import 'screens/todos_screen.dart';
+import 'screens/fiches_screen.dart';
 import 'supabase_config.dart';
 
 void main() async {
@@ -43,7 +43,7 @@ class AuthWrapper extends StatelessWidget {
         final session = snapshot.data?.session;
         
         if (session != null) {
-          return const TodosScreen();
+          return const FichesScreen();
         } else {
           return const AuthScreen();
         }
