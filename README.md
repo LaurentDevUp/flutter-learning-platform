@@ -43,12 +43,7 @@ Les clés API ne doivent **jamais** être hardcodées. Utilisez des variables d'
 
 ### Variables d'environnement
 
-Les clés d'API sont déjà configurées dans `lib/supabase_config.dart` :
-
-```dart
-static const String supabaseUrl = 'https://fnoncwektdnxxouyvatn.supabase.co';
-static const String supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...';
-```
+Configurez vos clés API via des variables d'environnement (voir section sécurité ci-dessus).
 
 ### Structure de la base de données
 
